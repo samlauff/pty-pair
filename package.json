@@ -1,0 +1,26 @@
+{
+  "name": "pty-pair",
+  "version": "1.0.0",
+  "description": "Creates and connects two pseudoterminals",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samlauff/pty-pair.git"
+  },
+  "keywords": [
+    "pty",
+    "pseudoterminal",
+    "serial",
+    "port",
+    "serialport"
+  ],
+  "author": "Sam Lauffenburger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samlauff/pty-pair/issues"
+  },
+  "homepage": "https://github.com/samlauff/pty-pair#readme"
+}
