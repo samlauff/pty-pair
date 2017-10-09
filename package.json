@@ -22,5 +22,14 @@
   "bugs": {
     "url": "https://github.com/samlauff/pty-pair/issues"
   },
-  "homepage": "https://github.com/samlauff/pty-pair#readme"
+  "homepage": "https://github.com/samlauff/pty-pair#readme",
+  "dependencies": {
+    "nan": "^2.7.0",
+    "node-gyp": "^3.6.2"
+  },
+  "scripts": {
+    "compile": "node-gyp rebuild",
+    "start": "node main.js"
+  },
+  "gypfile": true
 }
