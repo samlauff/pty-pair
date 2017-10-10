@@ -1,1 +1,0 @@
-cmd_Release/obj.target/pty-pair.node := g++ -shared -pthread -rdynamic -m64  -Wl,-soname=pty-pair.node -o Release/obj.target/pty-pair.node -Wl,--start-group Release/obj.target/pty-pair/src/pty_pair.o -Wl,--end-group -lutil -pthread
