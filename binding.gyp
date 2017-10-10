@@ -2,19 +2,14 @@
   'targets': [{
     'target_name': 'pty-pair',
     'sources': [
-      'src/pty_pair.cpp'
+      'src/pty_pair.cc'
     ],
    	'include_dirs': [
       '<!(node -e "require(\'nan\')")'
     ],
-   	'conditions': [
-      ['OS=="linux"', {
-        'cflags': [
-          '-lutil',
-          '-pthread',
-          '-static'
-        ],
-      }],
-    ],
+    'libraries': [
+      '-lutil',
+      '-pthread',
+    ]
    }]
 }

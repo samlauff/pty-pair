@@ -31,7 +31,7 @@ void EIO_Open(uv_work_t* req) {
 	char slave_port_name_1[256], slave_port_name_2[256];
 
 
-  	openpty(&console_master_1, &console_slave_1, slave_port_name_1, NULL, NULL);
+  openpty(&console_master_1, &console_slave_1, slave_port_name_1, NULL, NULL);
 	openpty(&console_master_2, &console_slave_2, slave_port_name_2, NULL, NULL);
 
   	data->result = 3;
@@ -39,27 +39,27 @@ void EIO_Open(uv_work_t* req) {
 
 
 NAN_METHOD(Hello) {
-    // 'info' is a macro's "implicit" parameter - it's a bridge object between C++ and JavaScript runtimes
-    // You would use info to both extract the parameters passed to a function as well as set the return value.
-    v8::Local<v8::Array> arr = Nan::New<v8::Array>(2);
-    Nan::Set(arr, 0, Nan::New("port1").ToLocalChecked());
-	Nan::Set(arr, 1, Nan::New("port2").ToLocalChecked());
-    info.GetReturnValue().Set(arr);
+  // 'info' is a macro's "implicit" parameter - it's a bridge object between C++ and JavaScript runtimes
+  // You would use info to both extract the parameters passed to a function as well as set the return value.
+  v8::Local<v8::Array> arr = Nan::New<v8::Array>(2);
+  Nan::Set(arr, 0, Nan::New("port1").ToLocalChecked());
+  Nan::Set(arr, 1, Nan::New("port2").ToLocalChecked());
+  info.GetReturnValue().Set(arr);
 
-	// OpenBaton* baton = new OpenBaton();
-	// memset(baton, 0, sizeof(OpenBaton));
-	// uv_work_t* req = new uv_work_t();
-	// req->data = baton;
-	// uv_queue_work(uv_default_loop(), req, EIO_Open, NULL);
-	int console_master_1, console_slave_1, console_master_2, console_slave_2;
-	// pthread_t console_thread_1, console_thread_2;
-	char slave_port_name_1[256], slave_port_name_2[256];
+  // OpenBaton* baton = new OpenBaton();
+  // memset(baton, 0, sizeof(OpenBaton));
+  // uv_work_t* req = new uv_work_t();
+  // req->data = baton;
+  // uv_queue_work(uv_default_loop(), req, EIO_Open, NULL);
+  int console_master_1, console_slave_1, console_master_2, console_slave_2;
+  // pthread_t console_thread_1, console_thread_2;
+  char slave_port_name_1[256], slave_port_name_2[256];
 
 
-  	openpty(&console_master_1, &console_slave_1, slave_port_name_1, NULL, NULL);
-	openpty(&console_master_2, &console_slave_2, slave_port_name_2, NULL, NULL);
+  openpty(&console_master_1, &console_slave_1, slave_port_name_1, NULL, NULL);
+  openpty(&console_master_2, &console_slave_2, slave_port_name_2, NULL, NULL);
 
-  	// data->result = 3;
+  // data->result = 3;
 }
 
 // Module initialization logic

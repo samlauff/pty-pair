@@ -21,9 +21,6 @@ CFLAGS_Debug := \
 	-Wextra \
 	-Wno-unused-parameter \
 	-m64 \
-	-lutil \
-	-pthread \
-	-static \
 	-g \
 	-O0
 
@@ -60,9 +57,6 @@ CFLAGS_Release := \
 	-Wextra \
 	-Wno-unused-parameter \
 	-m64 \
-	-lutil \
-	-pthread \
-	-static \
 	-O3 \
 	-fno-omit-frame-pointer
 
@@ -96,15 +90,15 @@ $(OBJS): GYP_CXXFLAGS := $(DEFS_$(BUILDTYPE)) $(INCS_$(BUILDTYPE))  $(CFLAGS_$(B
 
 # Suffix rules, putting all outputs into $(obj).
 
-$(obj).$(TOOLSET)/$(TARGET)/%.o: $(srcdir)/%.cpp FORCE_DO_CMD
+$(obj).$(TOOLSET)/$(TARGET)/%.o: $(srcdir)/%.cc FORCE_DO_CMD
 	@$(call do_cmd,cxx,1)
 
 # Try building from generated source, too.
 
-$(obj).$(TOOLSET)/$(TARGET)/%.o: $(obj).$(TOOLSET)/%.cpp FORCE_DO_CMD
+$(obj).$(TOOLSET)/$(TARGET)/%.o: $(obj).$(TOOLSET)/%.cc FORCE_DO_CMD
 	@$(call do_cmd,cxx,1)
 
-$(obj).$(TOOLSET)/$(TARGET)/%.o: $(obj)/%.cpp FORCE_DO_CMD
+$(obj).$(TOOLSET)/$(TARGET)/%.o: $(obj)/%.cc FORCE_DO_CMD
 	@$(call do_cmd,cxx,1)
 
 # End of this set of suffix rules
@@ -119,7 +113,9 @@ LDFLAGS_Release := \
 	-rdynamic \
 	-m64
 
-LIBS :=
+LIBS := \
+	-lutil \
+	-pthread
 
 $(obj).target/pty-pair.node: GYP_LDFLAGS := $(LDFLAGS_$(BUILDTYPE))
 $(obj).target/pty-pair.node: LIBS := $(LIBS)

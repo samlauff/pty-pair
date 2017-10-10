@@ -1,5 +1,5 @@
-cmd_Release/obj.target/pty-pair/src/pty_pair.o := g++ '-DNODE_GYP_MODULE_NAME=pty-pair' '-DUSING_UV_SHARED=1' '-DUSING_V8_SHARED=1' '-DV8_DEPRECATION_WARNINGS=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DBUILDING_NODE_EXTENSION' -I/home/samlauff/.node-gyp/6.11.4/include/node -I/home/samlauff/.node-gyp/6.11.4/src -I/home/samlauff/.node-gyp/6.11.4/deps/uv/include -I/home/samlauff/.node-gyp/6.11.4/deps/v8/include -I../node_modules/nan  -fPIC -pthread -Wall -Wextra -Wno-unused-parameter -m64 -lutil -pthread -static -O3 -fno-omit-frame-pointer -fno-rtti -fno-exceptions -std=gnu++0x -MMD -MF ./Release/.deps/Release/obj.target/pty-pair/src/pty_pair.o.d.raw   -c -o Release/obj.target/pty-pair/src/pty_pair.o ../src/pty_pair.cpp
-Release/obj.target/pty-pair/src/pty_pair.o: ../src/pty_pair.cpp \
+cmd_Release/obj.target/pty-pair/src/pty_pair.o := g++ '-DNODE_GYP_MODULE_NAME=pty-pair' '-DUSING_UV_SHARED=1' '-DUSING_V8_SHARED=1' '-DV8_DEPRECATION_WARNINGS=1' '-D_LARGEFILE_SOURCE' '-D_FILE_OFFSET_BITS=64' '-DBUILDING_NODE_EXTENSION' -I/home/samlauff/.node-gyp/6.11.4/include/node -I/home/samlauff/.node-gyp/6.11.4/src -I/home/samlauff/.node-gyp/6.11.4/deps/uv/include -I/home/samlauff/.node-gyp/6.11.4/deps/v8/include -I../node_modules/nan  -fPIC -pthread -Wall -Wextra -Wno-unused-parameter -m64 -O3 -fno-omit-frame-pointer -fno-rtti -fno-exceptions -std=gnu++0x -MMD -MF ./Release/.deps/Release/obj.target/pty-pair/src/pty_pair.o.d.raw   -c -o Release/obj.target/pty-pair/src/pty_pair.o ../src/pty_pair.cc
+Release/obj.target/pty-pair/src/pty_pair.o: ../src/pty_pair.cc \
  ../src/./pty_pair.h ../node_modules/nan/nan.h \
  /home/samlauff/.node-gyp/6.11.4/include/node/node_version.h \
  /home/samlauff/.node-gyp/6.11.4/include/node/uv.h \
@@ -28,7 +28,7 @@ Release/obj.target/pty-pair/src/pty_pair.o: ../src/pty_pair.cpp \
  ../node_modules/nan/nan_private.h \
  ../node_modules/nan/nan_typedarray_contents.h \
  ../node_modules/nan/nan_json.h
-../src/pty_pair.cpp:
+../src/pty_pair.cc:
 ../src/./pty_pair.h:
 ../node_modules/nan/nan.h:
 /home/samlauff/.node-gyp/6.11.4/include/node/node_version.h:
